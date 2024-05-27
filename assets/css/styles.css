@@ -1,0 +1,142 @@
+:root {
+    --bg-body : #371657;
+    --bg-nav : #8057a8;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-body);
+    font-family: "Nunito", sans-serif;
+    color: #371657;
+}
+
+
+header {
+    position:sticky;
+    top:0;
+}
+
+nav {
+    background-color: var(--bg-nav);
+    height: 15vh;
+    display:flex;
+    /*al eje principal row*/
+    justify-content: space-between;
+    /*al eje secundario column*/
+    align-items: center;
+    padding: 0 50px;
+}
+
+#nav-links {
+    display: flex;
+    /*quitar los puntos de los li*/
+    list-style: none;
+    gap: 30px;
+}
+
+
+#nav-links li a {
+    text-decoration: none; /*saco el subrayado*/
+    color: inherit; /*saco el color violeta y fuerzo a que tome el color aplicado al resto del texto defin en el body*/
+}
+
+h2 {
+    font-size: 3em; 
+}
+
+img {
+    width: 35vw;
+}
+
+#banner {
+    height: 85vh;
+    /*estilos para la imagen de fondo de la seccion*/
+    background-image: url(../img/banner-bg.jpg);
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    }
+
+#buscador {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center; /*eje principal column (vertical)*/
+    align-items: center;
+}
+
+
+#tendencias {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+.movies-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+*/
+
+
+
+
+/*estilos seccion tendencias con grid*/
+
+.movie-item-img{
+    height: 200px;
+    width: 150px;
+}
+
+.movie-item-detail {
+    display:none;
+}
+
+.books-grid {
+    font-size: 1; /* Para eliminar el espacio entre elementos inline-block */
+    text-align: center;
+}
+
+.movie-container {
+    display: inline-block; /* Para que los elementos estén en línea */
+    margin-right: 5px; /* Para agregar espacio entre elementos */
+    margin: 2.5px;
+    vertical-align: top; /* Alinear los elementos en la parte superior */
+}
+
+
+
+.movie-item-detail {
+    text-align: center; /* Alinea el texto en el centro */
+    font-size: 1;
+}
+
+.movie-container:hover{
+    transform: scale(1.2);
+    border: 2px solid #222121;
+    box-shadow: #222121;
+}
+
+.movie-container {
+    background-color: #626f5f; /* Color de fondo */
+    border-radius: 10px; /* Radio de borde */
+    padding: 10px; /* Espaciado interno */
+    width: 200px; /* Ancho del contenedor */
+    height: 400px; /* Altura del contenedor */
+}
